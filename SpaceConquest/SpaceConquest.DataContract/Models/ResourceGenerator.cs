@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceConquest.DataContract.Models
 {
-    public class ResourceGenerator : Building
+    public abstract class ResourceGenerator : Building
     {
         public List<Resource> ResourceBySecond { get; set; }
         public ResourceGenerator()

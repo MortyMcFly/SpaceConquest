@@ -1,34 +1,104 @@
 ﻿@model SpaceConquest.DataContract.Models.Planet
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.Name;
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Planet</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CaseNb)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CaseNb)
-        </dd>
-
-    </dl>
+<div class="ht-tm-element input-group justify-content-center">
+    <div class="input-group-prepend">
+        <button class="btn btn-outline-primary" type="button">&laquo;</button>
+    </div>
+    <input type="text" class="form-control" value="Système solaire X" disabled aria-label="" aria-describedby="basic-addon1">
+    <div class="input-group-append">
+        <button class="btn btn-outline-primary" type="button">&raquo;</button>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div class="row mt-5 text-mono">
+    <div class="col-md-3">
+        <div class="list-group ht-tm-element">
+            <a href="#!" class="list-group-item list-group-item-action">Planète 1</a>
+            <a href="#!" class="list-group-item list-group-item-action">Planète 2</a>
+            <a href="#!" class="list-group-item list-group-item-action">Planète 3</a>
+            <a href="#!" class="list-group-item list-group-item-action list-group-item-primary">Planète 4</a>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="ht-tm-element card border-primary mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>@Model.Name</h2>
+                        <img class="img-responsive p-1" src="~/Content/planets/1.png" width="128" alt="Planète 4" />
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table table-striped table-hover ht-tm-element">
+                            <tbody>
+                                <tr>
+                                    <td><img height="32" class="img-responsive" src="~/Content/energy.png" alt="Energy" /> Energie</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td><img height="32" class="img-responsive" src="~/Content/steel.png" alt="Energy" /> Acier</td>
+                                    <td>90</td>
+                                </tr>
+                                <tr>
+                                    <td><img height="32" class="img-responsive" src="~/Content/oxygen.png" alt="Energy" /> Oxygène</td>
+                                    <td>120</td>
+                                </tr>
+                                <tr>
+                                    <td><img height="32" class="img-responsive" src="~/Content/uranium.png" alt="Energy" /> Uranium</td>
+                                    <td>50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h4>Bâtiments</h4>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="ht-tm-element card">
+                            <img class="card-img-top p-4" src="~/Content/energy-plant.png" alt="Centrale électrique">
+                            <div class="card-body">
+                                <b class="card-title">Centrale électrique</b>
+                                <p class="card-text">Niveau 5</p>
+                                <a href="#!" class="btn btn-primary btn-shadow">Améliorer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="ht-tm-element card">
+                            <img class="card-img-top p-4" src="~/Content/steel-generator.png" alt="Usine d'acier">
+                            <div class="card-body">
+                                <b class="card-title">Fonderie d'acier</b>
+                                <p class="card-text">Niveau 3</p>
+                                <a href="#!" class="btn btn-primary btn-shadow">Améliorer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="ht-tm-element card">
+                            <img class="card-img-top p-4" src="~/Content/oxygen-generator.png" alt="Générateur d'oxygène">
+                            <div class="card-body">
+                                <b class="card-title">Générateur d'oxygène</b>
+                                <p class="card-text">Niveau 7</p>
+                                <a href="#!" class="btn center-block btn-primary btn-shadow">Améliorer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="ht-tm-element card">
+                            <img class="card-img-top p-4" src="~/Content/uranium-generator.png" alt="Laboratoire nucléaire">
+                            <div class="card-body">
+                                <b class="card-title">Laboratoire nucléaire</b>
+                                <p class="card-text">Niveau 2</p>
+                                <a href="#!" class="btn btn-primary btn-shadow">Améliorer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

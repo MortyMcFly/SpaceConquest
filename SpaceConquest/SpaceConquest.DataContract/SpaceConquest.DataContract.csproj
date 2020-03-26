@@ -45,6 +45,8 @@
     <Compile Include="Helpers\CurrentDateAttribute.cs" />
     <Compile Include="Models\Building.cs" />
     <Compile Include="Models\FunctionBuilding.cs" />
+    <Compile Include="Models\Generators\OxygenGenerator.cs" />
+    <Compile Include="Models\Generators\PowerPlant.cs" />
     <Compile Include="Models\ResourceGenerator.cs" />
     <Compile Include="Models\ResourceType.cs" />
     <Compile Include="Models\IDbEntity.cs" />
